@@ -1,0 +1,337 @@
+
+.card{
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+}
+
+.card .card-image{
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card .card-title{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: hsl(0, 0%, 20%);
+}
+
+.card .card-text{
+  font-family: Arial, sans-serif;
+  color: hsl(0, 0%, 30%)
+}
+
+/* estilos para o estudante */
+
+.student{
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  padding: 10px;
+  border: 1px solid hsla(0, 0%, 50%, 0.8);
+}
+
+.student p{
+  margin: 0;
+}
+
+/* estilos do switch */
+
+.switch {
+  position: fixed;
+  top: 22px; 
+  left: 140px; 
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+  z-index: 1; /* Ensure the switch stays above other elements */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  border: 1px solid rgb(140, 0, 0);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 28px;
+  width: 28px;
+  bottom: -3.5px;
+  left: -8px;
+  background-image: url('./assets/Lua.png');
+  background-size: cover; /* adjust as needed */
+  border: 2px solid rgb(140, 0, 0);
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 5px rgb(140, 0, 0);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-image: url('./assets/Sol.png');
+  background-size: cover; 
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 50px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* menu */
+
+.header-line {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0; /* Position the header at the top of the viewport */
+  left: 0; /* Position the header at the left of the viewport */
+  width: 100%;
+  height: auto;
+  background-color: rgb(18, 18, 18);
+}
+
+.header-line .logo {
+  margin-left: 6px;
+  width: 140px;
+  height: auto;
+}
+
+.data{
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: red;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.menu-links {
+  height: auto;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  right: 20px;
+}
+
+.menu-links a {
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  margin-top: 22px;
+  margin-left: 40px; /* Adjust the margin */
+}
+
+.menu-links a:hover {
+  color: red;
+  text-shadow: 5px 5px 5px rgba(255, 0, 0, 0.517);
+  transition: 0.7s;
+}
+
+/* ainda n percebo o sentido disto*/
+@media (max-width: 1576px) {
+  .header-line {
+    align-items: flex-start;
+  }
+
+  .menu-links {
+    margin-right: 10px;
+  }
+}
+
+/* Upper Line */
+
+.upper-line {
+  width: 100%;
+  margin-top: 68px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: auto;
+  border: none; /* Remove the default border */
+  border-top: 2px solid red; /* Add a red border as the upper line */
+}
+
+/* Imagens container */
+.imagens{
+  animation: imageAnimation 40s infinite;
+  background-size: 100%;
+  background-position: center;
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 60px;
+  left: -15px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 1px 1px 50px hsl(0, 98%, 50%);
+  padding: 300px;
+  width: 70%;
+  z-index: -1;
+}
+
+@keyframes imageAnimation {
+  0%{
+    background-image: url('./assets/Centro0.JPG');
+    opacity: 0.8;
+  }
+  16.6%{
+    background-image: url('./assets/Centro1.JPG');
+    opacity: 0.8;
+  }
+  33.2%{
+    background-image: url('./assets/Topo0.JPG');
+    opacity: 0.8;
+  }
+  50%{
+    background-image: url('./assets/Topo1.JPG');
+    opacity: 0.8;
+  }
+  66.6%{
+    background-image: url('./assets/Festa0.JPG');
+    opacity: 0.8;
+  }
+  83.2%{
+    background-image: url('./assets/Jardim0.JPG');
+    opacity: 0.8;
+  }
+  100%{
+    background-image: url('./assets/Centro0.JPG');
+    opacity: 0.8;
+  }
+}
+
+/* Menu Titulo */
+
+.menu-titulo{
+  position: fixed;
+  top: 160px;
+  left: 780px;
+  text-align: center;
+}
+
+.titulo{
+  font-family: Arial, sans-serif;
+  font-size: 60px;
+  text-shadow: 4px 2px 4px black;
+  color: white;
+  
+}
+
+/* Menu Buttons */
+
+.button1{
+  padding: 60px 250px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  background-color: gray;
+  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button1:hover{
+  transform: translateY(-15px);
+  transition: 0.7s;
+  border: 1px solid red;
+  box-shadow: 1px 1px 20px red;
+}
+
+.button1:active{
+  background-color: rgb(255, 132, 132);
+  transition: 0.1s;
+}
+
+.button2{
+  padding: 60px 250px;
+  margin-left: 150px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  background-color: gray;
+  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button2:hover {
+  transform: translateY(-15px);
+  transition: 0.7s;
+  border: 1px solid red;
+  box-shadow: 1px 1px 20px red;
+}
+
+.button2:active{
+  background-color: rgb(255, 132, 132);
+  transition: 0.1s;
+}
+
+.button-word{
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+.button1:hover .button-word{
+  transition: 0.7s;
+  color: red;
+}
+
+.button2:hover .button-word{
+  transition: 0.7s;
+  color: red;
+}
+/* Buttons container */
+
+.C1{
+  position: fixed;
+  bottom: 85px;
+  left:15%;
+}
+
+/* PopUp */
+
+.modal{
+  width: 500px;
+  border-radius: 10px;
+  position: fixed;
+  height: auto;
+  background-color: white;
+}
+
+.close{
+  position: relative;
+  
+  top: 10px;
+  cursor: pointer;
+  opacity: 1;
+}
