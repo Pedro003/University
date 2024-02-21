@@ -1,10 +1,13 @@
-import Menu from './Menu.jsx'
-import PopUp from './PopUp.jsx';
+import Home from './pages/Home.jsx'
+import PopUp from './components/PopUp.jsx';
 
 function App() {
     return(
       <>
-      <PopUp nome = "Log In"/>
+      <Router>
+        
+      </Router>
+      
       </>
     );
 }

@@ -1,8 +1,8 @@
-import Logo from './assets/Final.png'
-import Switch from "./Switch.jsx"
-import Data from "./Data.jsx"
+import Logo from '../assets/Final.png'
+import Switch from "../components/Switch.jsx"
+import Data from "../components/Data.jsx"
 
-function Menu(){
+function Home(){
     return(
         <>
             <div className="header-line">
@@ -10,7 +10,7 @@ function Menu(){
                 <Switch/>
                 <Data/>
                 <span className="menu-links">
-                    <a href="#">ABOUT US</a>
+                    <a href="/About">ABOUT US</a>
                     <a href="#">LOG IN</a>
                 </span>
             </div>
@@ -35,4 +35,4 @@ function Menu(){
 
 
 
-export default Menu
+export default Home
