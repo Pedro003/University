@@ -1,32 +1,18 @@
-import Logo from '../assets/Final.png'
-import Switch from "../components/Switch.jsx"
-import Data from "../components/Data.jsx"
+import Header from "../components/Header.jsx";
+import Button_Route from '../components/Button_Route.jsx';
 
 function Home(){
     return(
         <>
-            <div className="header-line">
-                <img className="logo" src={Logo} alt="profile picture"></img>
-                <Switch/>
-                <Data/>
-                <span className="menu-links">
-                    <a href="/About">ABOUT US</a>
-                    <a href="#">LOG IN</a>
-                </span>
-            </div>
-            <hr className="upper-line"/>
+            <Header/>
             <div className="imagens"/>
             <div className='menu-titulo'>
                 <h1 className='titulo'>START</h1>
                 <h1 className='titulo'>EXPLORING</h1>
             </div>   
             <div className="C1">
-                <button className='button1'>
-                    <p className='button-word'>EVENTS</p>
-                </button>
-                <button className='button2'>
-                    <p className='button-word'>LOCATIONS</p>
-                </button>
+                <Button_Route page="/events" class_button="button1" class_button_name="button-word" name="Events"/>
+                <Button_Route page="/locations" class_button="button2" class_button_name="button-word" name="locations"/>
             </div>
         </>
     );

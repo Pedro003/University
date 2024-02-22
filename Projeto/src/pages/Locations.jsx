@@ -1,13 +1,13 @@
 import Header from "../components/Header";
 
-function About(){
+function Locations(){
     return (
         <>
         <Header/>
-        <h1>About</h1>
+        <h1>Locations</h1>
         </>
     );
 }
 
 
-export default About
+export default Locations
