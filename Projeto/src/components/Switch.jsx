@@ -1,3 +1,8 @@
+/* NAO ESTA A SER UTILIZADO */
+
+/*EM PRINCIPIO É PARA MUDAR PARA BUTTON E IMPLEMENTAR*/
+
+
 import React, { useState } from 'react';
 
 function Switch() {

@@ -1,5 +1,7 @@
 import Header from "../components/Header";
-
+/*
+Vai conter informações dos locais de Braga
+*/
 function Locations(){
     return (
         <>

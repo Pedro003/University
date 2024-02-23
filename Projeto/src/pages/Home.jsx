@@ -1,6 +1,10 @@
 import Header from "../components/Header.jsx";
 import Button_Route from '../components/Button_Route.jsx';
 
+
+/*
+Pagina inicial do Projeto (HomePage)
+*/
 function Home(){
     return(
         <>

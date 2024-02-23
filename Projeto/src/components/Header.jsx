@@ -3,22 +3,35 @@ import Switch from "./Switch";
 import Data from "./Data";
 import Temp from "./Temp";
 
-function Header(){
-
+/*
+    Um componente de cabeçalho que contém elementos comuns de navegação e informações.
+ */
+function Header() {
+    // Renderiza o componente do cabeçalho
     return (
         <>
-        <div className="header-line">
-            <Button_Route page="/home" class_button="home"/>
-            <Data/>
-            <Temp name="temperatura"/>
-            <span className="menu-links">
-                <a href="/about">ABOUT US</a>
-                <a href="/log-in">LOG IN</a>
-            </span>
-        </div>
-        <hr className="upper-line"/>
+            {/* Linha do cabeçalho */}
+            <div className="header-line">
+                {/* Botão de rota para a página inicial */}
+                <Button_Route page="/home" class_button="home"/>
+
+                {/* Exibição de data e hora em tempo real */}
+                <Data/>
+
+                {/* Exibição da temperatura */}
+                <Temp name="temperatura"/>
+
+                {/* Links do menu */}
+                <span className="menu-links">
+                    <a href="/about">ABOUT US</a>
+                    <a href="/log-in">LOG IN</a>
+                </span>
+            </div>
+
+            {/* Linha horizontal separadora */}
+            <hr className="upper-line"/>
         </>
     );
 }
 
-export default Header
+export default Header;
