@@ -1,3 +1,15 @@
+.body{
+  position:fixed;
+  top: 0;
+  left: 0;
+  background-image: url('./assets/Fundo.jpg');
+  background-size: 50%;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+
 /* estilos do switch */
 
 .switch {
@@ -75,6 +87,7 @@ input:checked + .slider:before {
   width: 100%;
   height: 70px;
   background-color: rgb(18, 18, 18);
+  z-index: 2;
 }
 
 .header-line .home {
@@ -87,7 +100,6 @@ input:checked + .slider:before {
   background-image: url('./assets/Final.png');
   background-position: center;
   background-size: 100%;
-  z-index: 1;
 }
 
 .header-line .home:active {
@@ -134,6 +146,11 @@ opacity: 0.5;
   transition: 0.7s;
 }
 
+.menu-links a:active{
+  transition: 0.2s;
+  color: black;
+}
+
 /* ainda n percebo o sentido disto*/
 @media (max-width: 1576px) {
   .header-line {
@@ -156,6 +173,7 @@ opacity: 0.5;
   height: auto;
   border: none; /* Remove the default border */
   border-top: 2px solid red; /* Add a red border as the upper line */
+  z-index: 2;
 }
 
 /* Imagens container */
@@ -173,37 +191,37 @@ opacity: 0.5;
   box-shadow: 1px 1px 50px hsl(0, 98%, 50%);
   padding: 300px;
   width: 70%;
-  z-index: -1;
+  z-index: 1;
 }
 
 @keyframes imageAnimation {
   0%{
     background-image: url('./assets/Centro0.JPG');
-    opacity: 0.8;
+    opacity: 1;
   }
   16.6%{
     background-image: url('./assets/Centro1.JPG');
-    opacity: 0.8;
+    opacity: 1;
   }
   33.2%{
     background-image: url('./assets/Topo0.JPG');
-    opacity: 0.8;
+    opacity: 1;
   }
   50%{
     background-image: url('./assets/Topo1.JPG');
-    opacity: 0.8;
+    opacity: 1;
   }
   66.6%{
     background-image: url('./assets/Festa0.JPG');
-    opacity: 0.8;
+    opacity: 1;
   }
   83.2%{
     background-image: url('./assets/Jardim0.JPG');
-    opacity: 0.8;
+    opacity: 1;
   }
   100%{
     background-image: url('./assets/Centro0.JPG');
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 
@@ -214,6 +232,7 @@ opacity: 0.5;
   top: 160px;
   left: 780px;
   text-align: center;
+  z-index: 1;
 }
 
 .titulo{
@@ -231,8 +250,9 @@ opacity: 0.5;
   cursor: pointer;
   border-radius: 30px;
   border: none;
-  background-color: gray;
-  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  background-image: url('./assets/metallicGrey.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -254,8 +274,9 @@ opacity: 0.5;
   cursor: pointer;
   border-radius: 30px;
   border: none;
-  background-color: gray;
-  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  background-image: url('./assets/metallicGrey.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 

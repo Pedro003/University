@@ -9,7 +9,6 @@ function Header(){
         <>
         <div className="header-line">
             <Button_Route page="/home" class_button="home"/>
-            <Switch/>
             <Data/>
             <Temp name="temperatura"/>
             <span className="menu-links">
