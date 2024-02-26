@@ -161,13 +161,49 @@ opacity: 0.5;
   color: black;
 }
 
-
-@media (max-width: 940px) {
-  .menu-info{
-    opacity: 0;
-  }
+.menu-drop{
+  position: fixed;
+  right: -4%;
+  visibility: hidden;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  background-color: rgb(18, 18, 18);
+  border: none;
+  font-size: 35px;
+  z-index: 1;
 }
 
+.menu-drop:hover{
+  opacity: 0.5;
+}
+
+.menu-tabela{
+  visibility: hidden;
+  position: fixed;
+  display:grid;
+  border-radius: 10px;
+  right: 0;
+  top: 70px;
+  height: 150px;
+  width: 100px;
+  background-color: red;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.menu-tabela a{
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: white;
+  width: 100px;
+  height: 10px;
+  text-align: center;
+}
+
+.menu-tabela a:hover{
+  color: gray;
+  transition: 0.7s;
+}
 
 /* Upper Line */
 
@@ -186,19 +222,19 @@ opacity: 0.5;
 /* Imagens container */
 .imagens{
   animation: imageAnimation 40s infinite;
-  background-size: 100%;
-  background-position: center;
+  background-size: 90%;
+  background-position-y: 55%;
   background-color: black;
   background-repeat: no-repeat;
-  position: fixed;
-  top: 60px;
-  left: -15px;
+  position: relative;
+  top: 7%;
+  left: -1%;
   border: none;
   border-radius: 30px;
   box-shadow: 1px 1px 50px hsl(0, 98%, 50%);
-  padding: 300px;
-  width: 70%;
-  z-index: 1;
+  height: 64%;
+  width: 120%;
+  z-index: 0;
 }
 
 @keyframes imageAnimation {
@@ -235,9 +271,9 @@ opacity: 0.5;
 /* Menu Titulo */
 
 .menu-titulo{
-  position: fixed;
-  top: 160px;
-  left: 780px;
+  position: relative;
+  top: -50%;
+  left: 0%;
   text-align: center;
   z-index: 1;
 }
@@ -348,4 +384,35 @@ opacity: 0.5;
   left: 30%;
   position: fixed;
   background-color: red;
+}
+
+
+@media only screen and (max-width: 1020px){
+  .data{
+    visibility: hidden;
+  }
+
+  .imagens{
+    background-size: 130%;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .temperatura{
+    visibility: hidden;
+  }
+
+  .menu-links{
+    visibility: hidden;
+  }
+
+  .menu-drop{
+    visibility: visible;
+    margin-right: 7%;
+  }
+
+  .menu-tabela{
+    visibility: visible;
+  }
 }
