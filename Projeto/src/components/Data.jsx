@@ -36,10 +36,7 @@ function Data() {
 
     // Renderiza o componente de exibição da data e hora
     return (
-        <div className='data'>
-            {/* Exibe a data e hora formatadas */}
-            <p>{dia_do_mes} {meses[mes]} - {dias_da_semana[dia_da_semana]} - {hora}H{min}:{seg}</p>
-        </div>
+        <p className='data'>{dia_do_mes} {meses[mes]} - {dias_da_semana[dia_da_semana]} - {hora}H{min}:{seg}</p>      
     );
 }
 

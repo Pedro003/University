@@ -107,10 +107,10 @@ function Temp(props) {
 
     // Renderiza o componente de exibição da temperatura
     return (
-        <span className={props.name} style={{ color: "white" }}>
+        <p className={props.name} style={{ color: "white" }}>
             {/* Exibe a temperatura arredondada e colorida, juntamente com o nome da cidade */}
             {Math.round(temperature)} °C <span style={{ color: getTemperatureColor(temperature) }}>BRAGA</span>
-        </span>
+        </p>
     );
 }
 

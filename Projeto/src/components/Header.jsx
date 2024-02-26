@@ -15,11 +15,11 @@ function Header() {
                 {/* Botão de rota para a página inicial */}
                 <Button_Route page="/home" class_button="home"/>
 
-                {/* Exibição de data e hora em tempo real */}
-                <Data/>
-
-                {/* Exibição da temperatura */}
-                <Temp name="temperatura"/>
+                {/* Exibição de data/hora e temperatura em tempo real */}
+                <span className="menu-info">
+                    <Data/>
+                    <Temp name="temperatura"/>
+                </span>
 
                 {/* Links do menu */}
                 <span className="menu-links">

@@ -90,37 +90,47 @@ input:checked + .slider:before {
   z-index: 2;
 }
 
-.header-line .home {
-  width: 100px;
+.home {
+  width: 200px;
   margin-left: 4px;
   cursor: pointer;
   padding: 0;
   height:100%;
   border: none;
-  background-image: url('./assets/Final.png');
+  background-color: rgb(18, 18, 18);
+  background-image: url('./assets/ExpBraLogo.png');
   background-position: center;
   background-size: 100%;
+  z-index: 1;
 }
 
 .header-line .home:active {
 opacity: 0.5;
 }
 
+.menu-info{
+  height: auto;
+  display: flex;
+  position: fixed;
+  top: 9px;
+  right: 40%;
+}
 
-
-.header-line .data{
+.data{
+  height: auto;
   font-family: Arial, sans-serif;
   font-size: 16px;
   color: hsl(0, 0%, 100%);
-  position: fixed;
-  left: 41%;
+  margin-left: 10px;
 }
 
-.header-line .temperatura{
+.temperatura{
+  height: auto;
   font-family: Arial, sans-serif;
   font-size:24px;
-  position: fixed;
-  left: 54%;
+  margin-left: 20px;
+  margin-top: 10px;
+  
 }
 
 .menu-links {
@@ -137,7 +147,7 @@ opacity: 0.5;
   font-size: 20px;
   text-decoration: none;
   margin-top: 22px;
-  margin-left: 40px; /* Adjust the margin */
+  margin-left: 40px; 
 }
 
 .menu-links a:hover {
@@ -151,16 +161,13 @@ opacity: 0.5;
   color: black;
 }
 
-/* ainda n percebo o sentido disto*/
-@media (max-width: 1576px) {
-  .header-line {
-    align-items: flex-start;
-  }
 
-  .menu-links {
-    margin-right: 10px;
+@media (max-width: 940px) {
+  .menu-info{
+    opacity: 0;
   }
 }
+
 
 /* Upper Line */
 
