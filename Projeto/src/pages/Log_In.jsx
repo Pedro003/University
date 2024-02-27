@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import SignUpForm from "../components/SignUpForm";
+import "../styles/SignUp.css"
 
 /*
 Vai conter uma forma de registro (Henrique the builder)

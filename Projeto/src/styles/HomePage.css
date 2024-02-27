@@ -1,0 +1,103 @@
+.top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  
+  
+  /* Imagens container */
+  .imagens{
+    animation: imageAnimation 40s infinite;
+    background-size: 90%;
+    background-position-y: 55%;
+    background-color: black;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 7%;
+    left: -1%;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 1px 1px 50px hsl(0, 98%, 50%);
+    height: 64%;
+    width: 120%;
+    z-index: 0;
+  }
+  
+  @keyframes imageAnimation {
+    0%{
+      background-image: url('../assets/Centro0.JPG');
+      opacity: 1;
+    }
+    16.6%{
+      background-image: url('../assets/Centro1.JPG');
+      opacity: 1;
+    }
+    33.2%{
+      background-image: url('../assets/Topo0.JPG');
+      opacity: 1;
+    }
+    50%{
+      background-image: url('../assets/Topo1.JPG');
+      opacity: 1;
+    }
+    66.6%{
+      background-image: url('../assets/Festa0.JPG');
+      opacity: 1;
+    }
+    83.2%{
+      background-image: url('../assets/Jardim0.JPG');
+      opacity: 1;
+    }
+    100%{
+      background-image: url('../assets/Centro0.JPG');
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 1020px){
+    .imagens{
+      background-size: 130%;
+      transition: 0.5s;
+    }
+  }
+  
+  /* Menu Titulo */
+  
+  .menu-titulo{
+    position: relative;
+    top: -50%;
+    left: 0%;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .titulo{
+    font-family: Arial, sans-serif;
+    font-size: 60px;
+    text-shadow: 4px 2px 4px black;
+    color: white;
+    
+  }
+  
+  /*Arrow*/
+  
+  .Arrow{
+    background-color: transparent;
+    color: white;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 20px;
+    font-size: 30px;
+  }
+  
+  .Arrow:hover{
+    color: red;
+    transition: 0.5s;
+  }

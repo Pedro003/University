@@ -4,6 +4,7 @@ import Data from "./Data";
 import Temp from "./Temp";
 import {CiMenuFries} from "react-icons/ci"
 import { useState } from "react";
+import "../styles/Header.css"
 
 /*
     Um componente de cabeçalho que contém elementos comuns de navegação e informações.
@@ -20,7 +21,7 @@ function Header() {
             {/* Linha do cabeçalho */}
             <div className="header-line">
                 {/* Botão de rota para a página inicial */}
-                <Button_Route page="/home" class_button="home"/>
+                <Button_Route page="/home" class_button="logo"/>
 
                 {/* Exibição de data/hora e temperatura em tempo real */}
                 <span className="menu-info">
@@ -44,7 +45,7 @@ function Header() {
                         <a href="/about">ABOUT US</a>
                         <a href="/log-in">LOG IN</a>
                     </div>
-                )};
+                )}
             </div>
 
             {/* Linha horizontal separadora */}
