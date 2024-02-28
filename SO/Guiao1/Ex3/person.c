@@ -3,7 +3,7 @@
 
 int add_person(char *name, int age){
 
-    int fd = open(FILENAME, O_WRONLY | O_CREAT, 0600);
+    int fd = open(FILENAME, O_WRONLY | O_CREAT | O_APPEND, 0600);
     if(fd == -1){
         perror("erro ao abrir ficheiro");
         return -1;
@@ -20,7 +20,7 @@ int add_person(char *name, int age){
         return -1;
     }
 
-    printf("Adicionei a pessoa: nome:%s, idade:%d\n", p.name, p.age);
+    printf("Adicionei a pessoa:%s, idade:%d\n", p.name, p.age);
 
     close(fd);
     return 0;
@@ -43,13 +43,15 @@ int list_person(int N){
 
     while((bytes_lidos = read(fd, &p ,sizeof(Person))) > 0){
         i++;
-    
-    if(i<N){
-        bytes_escritos = write (1, &p, sizeof(Person));
-    }
-    else{
-        return i;
-    }
+        if(i<=N){
+            char buffer[200];
+            //bytes_escritos = write (1, &p, sizeof(Person));
+            int size = sprintf(buffer, "name:%s, age:%d\n", p.name, p.age);
+            write(1, buffer, size);
+        }
+        else{
+            return i;
+        }
     }
 
     close(fd);
