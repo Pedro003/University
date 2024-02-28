@@ -28,8 +28,8 @@ function Data() {
     // Extrai as partes da data e hora atual
     const currentDate = new Date();
     const hora = currentDate.getHours();
-    const min = currentDate.getMinutes();
-    const seg = currentDate.getSeconds();
+    const min = currentDate.getMinutes() < 10 ? '0' + currentDate.getMinutes() : currentDate.getMinutes();
+    const seg = currentDate.getSeconds() < 10 ? '0' + currentDate.getSeconds() : currentDate.getSeconds();;
     const dia_da_semana = currentDate.getDay();
     const dia_do_mes = currentDate.getUTCDate();
     const mes = currentDate.getUTCMonth();

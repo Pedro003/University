@@ -2,8 +2,6 @@ import Header from "../components/Header.jsx";
 import Button_Route from '../components/Button_Route.jsx';
 import { SlArrowDown,SlArrowUp } from "react-icons/sl";
 import { useState } from "react";
-import "../styles/HomePage.css"
-
 
 /*
 Pagina inicial do Projeto (HomePage)
@@ -16,7 +14,7 @@ function Home(){
   };
     return(
         <>
-            <section className="top">
+            <section className="body">
                 <Header/>
                 <div className="imagens"/>
                 <div className='menu-titulo'>
@@ -37,8 +35,6 @@ function Home(){
         </>
     );
 }
-
-
 
 
 export default Home

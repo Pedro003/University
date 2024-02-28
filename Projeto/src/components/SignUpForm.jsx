@@ -74,7 +74,7 @@ function SignUpForm() {
           />
         </div>
         {/* Botão de submissão do sign up */}
-        <button type="submit">Registrar</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
