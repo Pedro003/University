@@ -40,29 +40,70 @@ int valueExists(int **matrix, int value) {
             printf("[pid %d] row: %d\n", getpid(),i);
             for(int j=0; j<COLUMNS; j++){
                 if(matrix[i][j] == value){
-                    printf("Process %d, exited. found number at row %d\n", getpid(), i);
                     _exit(i);
                 }
             }
-            printf("Process %d, exited. nothing found (linha 255)\n", getpid());
-            _exit(i);
+            _exit(-1);
         }
     }
+    int res = 0;
     pid_t pid;
     for(int i=0; i<ROWS; i++){
         int status;
         pid = wait(&status);
         if(WIFEXITED(status)){
-            printf("Pai: %d, esperei pelo processo Filho:%d - %d\n", getpid(), WEXITSTATUS(status), pid);
+            if (WEXITSTATUS(status) < 255){
+                printf("Pai: %d, esperei pelo processo Filho:%d - %d\n", getpid(), WEXITSTATUS(status), pid);
+                res = 1;
+            }
+            else{
+                printf("Process %d, exited. nothing found (linha %d)\n", pid ,WEXITSTATUS(status));
+            }
+        }
+        else{
+            printf("Process %d, exited. something went wrong\n", pid);
         }
     }    
 
-    return 0;
+    return res;
 }
 
 
 // ex.6
 void linesWithValue(int **matrix, int value) {
+    pid_t pid;
+    pid_t pids[ROWS];
+    int status;
 
-    // TO DOm
+
+    for(int i=0; i<ROWS; i++){
+        pid = fork();
+       if (pid == 0) {
+            printf("[pid %d] row: %d\n", getpid(),i);
+            for(int j=0; j<COLUMNS; j++){
+                if(matrix[i][j] == value){
+                    _exit(i);
+                }
+            }
+            _exit(-1);
+        }
+    }
+    //falta ver aqui!!
+    for(int i=0; i<ROWS; i++){
+        int status;
+        pid = wait(&status);
+        if(WIFEXITED(status)){
+            if (WEXITSTATUS(status) < 255){
+                printf("Pai: %d, esperei pelo processo Filho:%d - %d\n", getpid(), WEXITSTATUS(status), pid);
+            }
+            else{
+                printf("Process %d, exited. nothing found (linha %d)\n", pid ,WEXITSTATUS(status));
+            }
+        }
+        else{
+            printf("Process %d, exited. something went wrong\n", pid);
+        }
+    }    
+
+    return 0;
 }
