@@ -13,7 +13,8 @@ int main(int argc, char *argv[]) {
         printf("comando -l executado\n");
         list_person(atoi(argv[2]));
     }
-    else if (argv[1] == "-u"){
+    else if (strcmp(argv[1], "-u") == 0){
+        printf("comando -u executado\n");
 
     }
     else{
