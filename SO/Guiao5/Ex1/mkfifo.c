@@ -4,7 +4,7 @@
 
 int main(){
 
-    printf("PIPE_BUF: %d\n", PIPE_BUF);
+    //printf("PIPE_BUF: %d\n", PIPE_BUF);
 
     int res = mkfifo("fifo", 0666);
     
