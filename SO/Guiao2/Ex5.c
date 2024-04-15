@@ -14,7 +14,8 @@ int main(int argc, char *argv[]){
     printMatrix(matrix);
 
     // TO DO
-    valueExists(matrix, atoi(argv[1]));
+    //valueExists(matrix, atoi(argv[1]));
+    linesWithValue(matrix, atoi(argv[1]));
 
     // free matrix
     for (int i = 0; i < ROWS; i++) {

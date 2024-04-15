@@ -70,7 +70,7 @@ int valueExists(int **matrix, int value) {
 
 
 // ex.6
-void linesWithValue(int **matrix, int value) {
+int linesWithValue(int **matrix, int value) {
     pid_t pid;
     pid_t pids[ROWS];
     int status;
@@ -79,7 +79,7 @@ void linesWithValue(int **matrix, int value) {
     for(int i=0; i<ROWS; i++){
         pid = fork();
        if (pid == 0) {
-            printf("[pid %d] row: %d\n", getpid(),i);
+            //printf("[pid %d] row: %d\n", getpid(),i);
             for(int j=0; j<COLUMNS; j++){
                 if(matrix[i][j] == value){
                     _exit(i);
@@ -87,17 +87,15 @@ void linesWithValue(int **matrix, int value) {
             }
             _exit(-1);
         }
+        else pids[i] = pid;
     }
-    //falta ver aqui!!
+
     for(int i=0; i<ROWS; i++){
         int status;
-        pid = wait(&status);
+        pid = waitpid(pids[i], &status, 0);
         if(WIFEXITED(status)){
             if (WEXITSTATUS(status) < 255){
-                printf("Pai: %d, esperei pelo processo Filho:%d - %d\n", getpid(), WEXITSTATUS(status), pid);
-            }
-            else{
-                printf("Process %d, exited. nothing found (linha %d)\n", pid ,WEXITSTATUS(status));
+                printf("Filho: %d - encontrou numero:%d - linha: %d\n", pid, value, WEXITSTATUS(status));
             }
         }
         else{

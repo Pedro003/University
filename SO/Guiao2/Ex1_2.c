@@ -23,12 +23,12 @@ int main(){
         int pid_terminou = wait(&status);
         printf("PAI: terminou o filho %d\n", pid_terminou);
 
-        if (WIDEEXITED(status)){
+        if (WIFEXITED(status)){
             printf("PAI: terminei o filho %d com %d\n", pid_terminou, WEXITSTATUS(status));
         }
     }
 
-    printf("PAI terminou");
+    printf("PAI terminou\n");
 
 return 10;
 }
