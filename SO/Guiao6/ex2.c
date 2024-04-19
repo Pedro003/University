@@ -52,7 +52,7 @@ int main(){
 
     close(fd_err);
 
-// READ 0 & WRITE 1
+// READ 0 & WRITE 1 teria de adiconar fork() e trabalhar sobre o processo filho
     char buf[BUFF_SIZE];
     int bytes_read;
 

@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/wait.h>
+
 //faltam os includes 
 #define BUFF_SIZE 1024
 
@@ -51,22 +56,18 @@ int main(){
     printf("dup2 err = %d\n", res);
 
     close(fd_err);
+    printf("redirecionei STDERR para erros.txt\n");
 
-// READ 0 & WRITE 1
-    char buf[BUFF_SIZE];
-    int bytes_read;
+    // EXEC wc
 
-    while ((bytes_read = read(0,buf,BUFF_SIZE)) > 0){
-        write(1, buf, bytes_read);
-        write(2, buf, bytes_read);
+    int exec_res = execlp("wc", "wc", NULL);
+    if(exec_res == -1){
+        perror("erro no exec");
     }
 
-    dup2(fd_out_original , 1);
-
-    printf("terminei\n");
-
-
-
+    // PRINT "TERMINEI"
+    dup(fd_out_original, 1);
+    printf("Terminei!\n");
 
     return 0;
 }
