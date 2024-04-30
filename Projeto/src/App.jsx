@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
-import Log_In from './pages/Log_In.jsx'
-import Events from './pages/Events.jsx'
-import Locations from './pages/Locations.jsx'
+import Home from './pages/Home/Home.jsx'
+import About from './pages/About/About.jsx'
+import Log_In from './pages/Log/Log_In.jsx'
+import Events from './pages/Events/Events.jsx'
+import Locations from './pages/Locations/Locations.jsx'
 
 /*
 O componente principal que configura as rotas da aplicação utilizando React Router.

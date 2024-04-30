@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { TbRectangleVerticalFilled } from "react-icons/tb";
+
+
+
+
+
 
 // Chave e URL base para acessar a API de previsão do tempo
 const api = {
@@ -47,6 +53,13 @@ const getWeatherTemperature = async () => {
     }
 };
 
+const getWeatherEmoji = async () => {
+    const weatherEmoji = await fetchWeatherData();
+    if (weatherEmoji) {
+        return "http://openweathermap.org/img/w/" + weatherEmoji.weather[0].icon + ".png";
+    }
+}
+
 /*
 Um componente que exibe a temperatura atual de Braga, Portugal.
 A temperatura é atualizada a cada minuto e é colorida de acordo com faixas de temperatura.
@@ -58,12 +71,15 @@ props.name - O nome da classe CSS para styling.
 function Temp(props) {
     // Estado para armazenar a temperatura atual
     const [temperature, setTemperature] = useState(null);
+    const [emoji, setEmoji] = useState(null);
 
     // Efeito para carregar a temperatura atual e atualizá-la a cada minuto
     useEffect(() => {
         const loadTemperature = async () => {
             const temp = await getWeatherTemperature();
+            const emoj = await getWeatherEmoji();
             setTemperature(temp);
+            setEmoji(emoj);
         };
         loadTemperature();
         const intervalId = setInterval(loadTemperature, 60 * 1000); // Atualiza a cada minuto
@@ -107,10 +123,20 @@ function Temp(props) {
 
     // Renderiza o componente de exibição da temperatura
     return (
-        <p className={props.name} style={{ color: "white" }}>
-            {/* Exibe a temperatura arredondada e colorida, juntamente com o nome da cidade */}
-            {Math.round(temperature)} °C <span style={{ color: getTemperatureColor(temperature) }}>BRAGA</span>
-        </p>
+        <>
+            <p className={props.name}>
+                <img src={emoji} style={{ height: "25px", marginLeft: "20px" }} />
+            </p>
+            <p className={props.name} style={{ color: "white" }} >
+
+                {/* Exibe a temperatura arredondada e colorida, juntamente com o nome da cidade */}
+                {Math.round(temperature)} ºC
+                < span style={{ color: getTemperatureColor(temperature) }
+                }>
+                </span >
+            </p >
+
+        </>
     );
 }
 

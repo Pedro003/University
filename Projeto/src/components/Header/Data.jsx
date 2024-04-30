@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from "./Header.module.css"
 
 /*
  Um componente de exibição de data e hora em tempo real.
@@ -23,20 +24,19 @@ function Data() {
     const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
 
     // Array de dias da semana para mapear o número do dia para o nome do dia
-    const dias_da_semana = ["Domingo", "Segunda Feira", "Terça Feira", "Quarta Feira", "Quinta Feira", "Sexta Feira", "Sábado"];
+    const dias_da_semana = ["Sunday", "Mon", "Tue", "Wed", "Thu", "Sexta Feira", "Sábado"];
 
     // Extrai as partes da data e hora atual
     const currentDate = new Date();
     const hora = currentDate.getHours();
     const min = currentDate.getMinutes() < 10 ? '0' + currentDate.getMinutes() : currentDate.getMinutes();
-    const seg = currentDate.getSeconds() < 10 ? '0' + currentDate.getSeconds() : currentDate.getSeconds();;
     const dia_da_semana = currentDate.getDay();
     const dia_do_mes = currentDate.getUTCDate();
     const mes = currentDate.getUTCMonth();
 
     // Renderiza o componente de exibição da data e hora
     return (
-        <p className='data'>{dia_do_mes} {meses[mes]} - {dias_da_semana[dia_da_semana]} - {hora}H{min}:{seg}</p>      
+        <p className={styles.data}>{dia_do_mes} {meses[mes]} - {dias_da_semana[dia_da_semana]} - {hora}H{min}</p>
     );
 }
 
