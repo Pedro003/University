@@ -4,7 +4,7 @@ class Incrementer extends Thread {
     public Incrementer(int I) {
         this.I = I;
     }
-
+    @Override
     public void run() {
         for (int i = 1; i <= I; i++) {
             System.out.println(Thread.currentThread().getName() + " : " + i);
@@ -12,7 +12,7 @@ class Incrementer extends Thread {
     }
 }
 
-public class ex1 {
+public class Ex1 {
     public static void main(String[] args) {
 
         int N = Integer.parseInt(args[0]); // Numero de threads
@@ -24,7 +24,6 @@ public class ex1 {
             a[i] = new Incrementer(I);
             a[i].start();
         }
-
         try {
             for (int i = 0; i < N; i++) {
                 a[i].join();
@@ -32,5 +31,6 @@ public class ex1 {
         } catch (InterruptedException e) {
             System.out.println("Interrupted");
         }
+        System.out.println("estou aqui");
     }
 }
