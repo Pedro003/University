@@ -11,7 +11,7 @@ int main() {
 
 
 	printf("\nCOMANDO 1: a executar mysystem para %s\n",comando1);
-	ret = system(comando1);
+	ret = mysystem(comando1);
 	printf("COMANDO 1: ret = %d\n",ret);
 
 	printf("\nCOMANDO 2: a executar mysystem para %s\n",comando2);
