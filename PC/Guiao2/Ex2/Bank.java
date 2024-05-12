@@ -38,32 +38,31 @@ public class Bank {
     }
 
     // Deposit
-    public synchronized boolean deposit(int id, int value) {
+    public boolean deposit(int id, int value) {
         if (id < 0 || id >= slots)
             return false;
         return av[id].deposit(value);
     }
 
     // Tranfer
-    public boolean transfer(int from, int to, int value) {
+    public synchronized boolean transfer(int from, int to, int value) {
         if (withdraw(from, value))
             return deposit(to, value);
         return false;
     }
 
-    // Withdraw; fails if no such account or insufficient balance
-    public synchronized boolean withdraw(int id, int value) {
+    // Withdraw fails if no such account or insufficient balance
+    public boolean withdraw(int id, int value) {
         if (id < 0 || id >= slots)
             return false;
         return av[id].withdraw(value);
     }
 
     // Total balance
-    public int totalBalance() {
+    public synchronized int totalBalance() {
         int total=0;
         for (int i=0; i<slots; i++)
             total += av[i].balance();
         return total;
     }
-
 }
