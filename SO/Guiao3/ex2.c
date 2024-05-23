@@ -5,7 +5,7 @@ int main(){
 
     printf("PAI | ex2\n");
 
-    int res = 0, status;
+    int res = 0, status, filho;
 
     char *command[3] = {"ls", "-l", NULL};
 
@@ -25,9 +25,9 @@ int main(){
             break;    
         default:
             // estamos no processo pai
-            wait(&status);
+            filho = wait(&status);
             if(WIFEXITED(status)){
-                printf("Filho devolveu %d\n", WEXITSTATUS(status));
+                printf("Filho %d devolveu %d\n", filho, WEXITSTATUS(status));
             }
 
             break;    

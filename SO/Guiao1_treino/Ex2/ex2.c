@@ -23,7 +23,7 @@ int mycp(char *ficheiro_origem, char *ficheiro_destino){
         }
         else{
             while((ler = read(fl,buffer,BUFFER_SIZE)) > 0){
-                escrever = write(fe,buffer,BUFFER_SIZE);
+                escrever = write(fe,buffer,ler);
             }
             close(fl);
             close(fe);

@@ -2,18 +2,18 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-#define processa 1
+#define processa 100
 
 int mycat(){
-    ssize_t leitura;
-    ssize_t escrita;
+    int leitura;
+    int escrita;
     char buffer [processa];
 
     while((leitura = read(0, buffer, processa)) > 0){
-        printf("li %ld bytes\n", leitura);
+        printf("li %d bytes\n", leitura);
 
-        escrita = write(1, buffer, processa);
-        printf("\nescrevi %ld bytes\n", escrita);
+        escrita = write(1, buffer, leitura);
+        printf("\nescrevi %d bytes\n", escrita);
 
         if (leitura != escrita){
             return 1;

@@ -34,7 +34,6 @@ int add_person(char *name, int age){
 
 int list_person(int N){
     ssize_t bytes_lidos;
-    ssize_t bytes_escritos;
     int fd = open(FILENAME, O_RDONLY);
     if (fd<0){
         perror("erro ao abrir ficheiro");
@@ -47,7 +46,6 @@ int list_person(int N){
         i++;
     
         if(i<=N){
-            //bytes_escritos = write (1, &p, sizeof(Person));
             char buffer[200];
             int size = sprintf(buffer,"pessoa:%s age:%d\n",p.name, p.age);
             write(1,buffer,size);
@@ -64,14 +62,13 @@ int list_person(int N){
 int update_age(char *nome, int age){
     int fd = open(FILENAME, O_RDWR);
     ssize_t bytes_lidos;
-    ssize_t bytes_escritos;
     Person p;
 
     while((bytes_lidos = read(fd, &p, sizeof(Person))) > 0){
         if(strcmp(p.name,nome) == 0){
             lseek(fd, -bytes_lidos, SEEK_CUR);
             p.age = age;
-            bytes_escritos = write(fd, &p, sizeof(Person));
+            write(fd, &p, sizeof(Person));
             close(fd);
             printf("idade de %s atualizada com sucesso!\n",p.name);
             return 1;
@@ -83,15 +80,15 @@ int update_age(char *nome, int age){
 }
 
 
-int update_age_v2(int pos, int age){
-    int fd = open(FILENAME, O_WRONLY);
-    lseek(fd, sizeof(Person)*pos, SEEK_CUR);
-    lseek()
-    write(fd, )
-    Person p;
-
-    return 0;
-}
+//int update_age_v2(int pos, int age){
+//    int fd = open(FILENAME, O_WRONLY);
+//    lseek(fd, sizeof(Person)*pos, SEEK_CUR);
+//    lseek()
+//    write(fd, )
+//    Person p;
+//
+//    return 0;
+//}
 
 
 

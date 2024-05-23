@@ -1,0 +1,21 @@
+Teste SO - 2dias de estudo
+
+1ºdia -> tentar ver os 5 primeiros guioes;
+
+Guiao 1 ->
+- Uso de read e write;
+- Uso de open para escrita e leitura;
+- Uso de lseek para reposicionar o apontador qnd se pretende atualizar uma struct num ficheiro binário.
+
+Guiao 2 ->
+- Uso de forks, criando processos filhos a correr sequencialmente ou em concorrencia;
+- Uso de wait(&status) | waitpid(pids[i], &status, 0) | WIFEXITED(status) | WEXITSTATUS(status). 
+
+Guiao3 ->
+- Uso de execvp(praticamente foi só este metodo de execução usado).
+
+Guiao4 ->
+
+
+
+2ºdia -> ver o 6ºguiao e fazer teste 2023 (exame se possivel).

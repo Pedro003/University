@@ -9,15 +9,13 @@ int main(){
     if(res == 0){
         //filho
         printf("FILHO: PID: %d, PPID: %d\n", getpid(), getppid());
-        sleep(4);
+        sleep(10);
         printf("FILHO %d terminei\n", getpid());
         _exit(30); // entre 0 e 254 permite
     }
     else{
         //pai
         printf("PAI: PID: %d, PPID: %d, pid filho = %d\n", getpid(), getppid(), res);
-        sleep(5);
-
         printf("PAI: vou esperar pelo filho\n");
         int status;
         int pid_terminou = wait(&status);

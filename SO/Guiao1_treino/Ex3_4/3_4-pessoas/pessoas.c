@@ -17,26 +17,23 @@ int main(int argc, char* argv[]){
 
     if ( strcmp(argv[1],"-i") == 0 )
     {
-        int pos = add_person(argv[2], atoi(argv[3]));
-        char buffer[15];
-        int size = sprintf(buffer,"registo %d\n", pos);
-        write(1, buffer, size);
+        // TO DO
     }
 
     if ( strcmp(argv[1],"-l") == 0 )
     {
-        list_person(atoi(argv[2]));
+        // TO DO
     }
 
     if ( strcmp(argv[1],"-u") == 0 )
     {
-        update_age(argv[2], atoi(argv[3]));
+        // TO DO
     }
-    // ! nao percebi o que é suposto fazer nesta
-    //if ( strcmp(argv[1],"-o") == 0 )
-    //{
-    //    update_age_V2(atoi(argv[2]), atoi(argv[3]));
-    //}
+
+    if ( strcmp(argv[1],"-o") == 0 )
+    {
+        // TO DO
+    }
 
     return 0;
 }

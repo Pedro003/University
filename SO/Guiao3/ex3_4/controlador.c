@@ -34,7 +34,7 @@ void controller(int N, char** commands) {
     for (int i = 0; i < N; i++){
         waitpid(pids[i], &status, 0);
         if(WIFEXITED(status)){
-            printf("Command %s executed %d times \n", commands[i], WIFEXITED(status));
+            printf("Command %s executed %d times \n", commands[i], WEXITSTATUS(status));
         }
         else{
             printf("Monitor for command %s was interrupted \n", commands[i]);
