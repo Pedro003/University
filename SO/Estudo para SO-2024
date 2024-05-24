@@ -14,8 +14,18 @@ Guiao 2 ->
 Guiao3 ->
 - Uso de execvp(praticamente foi só este metodo de execução usado).
 
-Guiao4 ->
-
-
 
 2ºdia -> ver o 6ºguiao e fazer teste 2023 (exame se possivel).
+
+Guiao4 ->
+- Uso de pipes para escrita no lado do processo filho e leitura no lado do processo pai.
+
+Guiao5 ->
+- FIFOS(pipes com nome) 
+
+Guiao6 ->
+- uso de dup2 e dup;
+- uso de dup2 juntamente com pipes anonimos para nos processos filho tratar uma pipeline
+
+Teste2023 ->
+Exame2023 ->

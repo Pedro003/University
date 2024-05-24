@@ -31,11 +31,12 @@ void printMatrix(int **matrix) {
     }
 }
 
-void lookupNumber(int** matrix, int value, int* vector){
+int lookupNumber(int** matrix, int value, int* vector){
 
     //TODO
     //Hint - use the Minfo struct from matrix.h!
     int p[2];
+    int pids[ROWS];
 
     if(pipe(p) == -1){
         perror("erro no pipe");
@@ -60,11 +61,12 @@ void lookupNumber(int** matrix, int value, int* vector){
                         n.ocur_nr++;
                     }
                 }
-                int bytes_written = write(p[1], &n, sizeof(Minfo));
+                write(p[1], &n, sizeof(Minfo));
                 close(p[1]);
                 _exit(0);
             }
             default: {
+                pids[i] = fork_res;
                 break;
             }
 
@@ -77,19 +79,19 @@ void lookupNumber(int** matrix, int value, int* vector){
     while(read(p[0], &ni, sizeof(Minfo)) > 0) {
         vector[ni.line_nr] = ni.ocur_nr;
     }
-
     close(p[0]);
 
-    // esperar (falta ver aqui)!!
-    int status; // n tenho certeza se é aqui!!
+    int status;
+    int wait_res;
     for(int i = 0; i < ROWS; i++){
-        int wait_res = wait(&status);
-        if(WIFEEXITED(status)){
+        wait_res = waitpid(pids[i], &status, 0);
+        if(WIFEXITED(status)){
             printf("PAI | filho %d terminou com valor %d\n", wait_res, WEXITSTATUS(status));
         }
         else{
             printf("PAI | filho %d nao terminou corretamente", wait_res);
+            return -1;
         }
     }
-
+    return 0;
 }

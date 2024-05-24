@@ -1,0 +1,4 @@
+dup2 out = 1
+dup2 err = 2
+redirecionei STDERR para erros.txt
+  52   91 3110

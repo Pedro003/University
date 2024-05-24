@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 int PaiParaFilho(){
 
@@ -40,12 +42,18 @@ int PaiParaFilho(){
 
             int status;
             int wait_res = wait(&status);
-            if(WIFEEXITED(status)){
+            if(WIFEXITED(status)){
                 printf("PAI | filho %d terminou com valor %d\n", wait_res, WEXITSTATUS(status));
+                return WEXITSTATUS(status);
             }
             else{
                 printf("PAI | filho %d nao terminou corretamente", wait_res);
+                return -1;
             }
         }
     }
+}
+
+int main(int argc, char* argv[]){
+    return PaiParaFilho();
 }

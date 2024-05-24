@@ -1,0 +1,13 @@
+Pergunta 1:
+(FALTA)
+
+
+Pergunta 2:
+
+alínea(a):
+    -Acho que a melhor opção para otimizar o desempenho da aplicação seria realizar escritas com um tamanho maior,
+     pois se a quantidade de informação que se pretendesse alocar fosse de tamanhos muito elevados se permitice mos realizar escritas muito maiores faria com que ouvesse otimização em termos de tempo de processamento
+
+alínea(b):
+    -A forma sequencial é a melhor pois busca dados de forma ordenada e linear enquanto a 
+    forma aleatória de leitura promove saltos frequentes entre diferentes posições de memoria o que faz com que a busca por um certo tipo de dados se torne mais demorada

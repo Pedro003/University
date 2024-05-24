@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 
     // allocate memory and initialize vector with zeros
     int *vector = malloc(sizeof(int) * ROWS);
-    bzero(vector, sizeof(int) * ROWS);
+    bzero(vector, sizeof(int) * ROWS);  // ver o que esta função faz
 
     lookupNumber(matrix, atoi(argv[1]), vector);
 

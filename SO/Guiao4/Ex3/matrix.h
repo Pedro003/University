@@ -17,4 +17,4 @@ int **createMatrix();
 
 void printMatrix(int **matrix);
 
-void lookupNumber(int** matrix, int value, int* vector);
+int lookupNumber(int** matrix, int value, int* vector);
