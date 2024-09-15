@@ -1,0 +1,169 @@
+.eventDetailsContainer {
+  margin: 50px 100px;
+}
+
+.eventHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.shareIcon {
+  font-size: 24px; 
+  cursor: pointer; 
+  margin: 20px; 
+}
+
+.shareIcon:hover {
+  color: #af2431; 
+}
+
+.counter {
+  margin-left: 10px; 
+}
+
+.redHeart {
+  color: #af2431;
+  font-size: 24px; 
+  cursor: pointer; 
+  margin: 20px; 
+}
+
+.redHeart:hover {
+  opacity: 0.8;
+}
+
+.borderHeart {
+  font-size: 24px; 
+  cursor: pointer; 
+  margin: 20px; 
+}
+
+.borderHeart:hover {
+  color: #af2431; 
+}
+
+.imageContainer {
+  position: relative;
+  margin-bottom: 20px; 
+}
+
+.eventImage {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.arrowIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 36px;
+  color: #af2431;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrowIcon:hover {
+  opacity: 0.8;
+}
+
+.arrowIcon.right {
+  right: 10px; 
+}
+
+.arrowIcon.left {
+  left: 10px;
+}
+
+
+.eventSpace {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.eventDetailsLeft {
+  margin-top: auto;
+  margin-right: 20px;
+  margin-bottom: auto;
+  margin-left: 0px;
+  flex-grow: 2.75; 
+  flex-basis: 0; 
+}
+
+.eventDetailsRight {
+  margin: auto 20px;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: calc(25% - 40px);
+  padding-left: 20px;
+  border-left: 2px solid #000000;
+}
+
+.description,
+.date,
+.address {
+  font-size: 16px;
+}
+
+.category,
+.price,
+.creator {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.creator {
+  position: relative;
+  margin-left: 10px;
+}
+
+.avatarWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+}
+
+.avatarLabel {
+  position: relative;
+  width: 30px; 
+  height: 30px;
+  left: 0px;
+  border-radius: 50%; 
+  background-color: #ccc;
+  overflow: hidden;
+}
+
+.avatarLabel .defaultAvatar {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 10px; 
+  height: 10px;
+}
+
+.avatarLabel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; 
+}

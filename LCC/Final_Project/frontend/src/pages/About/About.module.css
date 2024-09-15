@@ -1,0 +1,97 @@
+.Wrapper {
+    padding: 10px;
+    height: auto;
+    color: black;
+    display: grid;
+    grid-template-rows: auto 70px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.info {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    width: 70%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.pessoasWrapper {
+    display: flex;
+    grid-row-start: 5;
+    grid-row-end: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+.pessoas {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    place-items: center;
+}
+
+.pess {
+    background-color: #e6e6e6;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    transition: background-color 1s, opacity 0.3s;
+}
+
+.pess:hover {
+    background-color: #af2431;
+}
+
+
+.imagemAfonso,
+.imagemHenrique,
+.imagemPedro,
+.imagemRui {
+    align-self: center;
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.imagemAfonso {
+    background-image: url('afonsofoto.jpg');
+}
+
+.imagemHenrique {
+    background-image: url('henrique.jpeg');
+}
+
+.imagemPedro {
+    background-image: url('pedro.jpeg');
+}
+
+.imagemRui {
+    background-image: url('rui.jpeg');
+}
+
+.nome {
+    padding-left: 10px;
+}
+
+.git {
+    padding-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

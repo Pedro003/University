@@ -1,0 +1,86 @@
+.card {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  place-items: center;
+  margin: 30px auto;
+  padding: 0;
+  border: 2px solid #ccc;
+  background-color: #e6e6e6;
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card:hover{
+  transform: translateY(2px);
+  transition: 0.3s;
+  opacity: 0.8;
+}
+
+.card .card1 {
+  grid-column: 1; 
+  padding: 20px; 
+  overflow: hidden;
+  text-align: center;
+}
+
+.card .card2 {
+  grid-column: 2; 
+  padding: 20px;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.card .card3 {
+  grid-column: 3; 
+  padding: 20px; 
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.carddata {
+  font-size: 40px; 
+  color: #2f2f2f; 
+  margin-top: 5px; 
+  margin-bottom: 5px;
+}
+
+.cardtitle {
+  font-size: 35px; 
+  color: #2f2f2f; 
+  margin-top: 5px; 
+  margin-bottom: 5px; 
+  font-weight: bold;
+}
+
+.cardcategoria {
+  font-size: 25px; 
+  color: #af2431; 
+  margin-top: 5px; 
+  margin-bottom: 5px; 
+}
+
+.cardtext {
+  font-size: 20px; 
+  color: #817a7a; 
+  margin-top: 5px; 
+  margin-bottom: 5px;
+}
+
+.gratis {
+  font-size: 20px; 
+  color: #af2431; 
+  margin-top: 5px; 
+  margin-bottom: 5px;
+}
+
+.card:hover .gratis,
+.card:hover .cardcategoria,
+.card:hover .carddata,
+.card:hover .cardtitle,
+.card:hover .cardtext {
+  color: #af2431; 
+}
+  

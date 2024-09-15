@@ -1,0 +1,77 @@
+/* card locations */
+.card {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    border: 2px solid #ccc;
+    background-color: #e6e6e6;
+    margin: 30px auto;
+    padding: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(2px);
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.card1 {
+    padding: 0;
+    height: 200px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    border: 40px;
+}
+
+.cardImage {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 90%;
+}
+
+.cardtitle {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #2f2f2f;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cardcategoria {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    color: #af2431;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cardtext {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #817a7a;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.card:hover .cardcategoria,
+.card:hover .cardtitle,
+.card:hover .cardtext {
+  color: #af2431; 
+}
