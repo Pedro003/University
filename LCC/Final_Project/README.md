@@ -6,5 +6,5 @@ Comandos:
 - npm run dev: dentro das pastas frontend ou backend para correr separadamente.
 
 Made with the help of:
-https://github.com/jordan21pt
-https://github.com/JQUINN2000
+- https://github.com/jordan21pt
+- https://github.com/JQUINN2000
