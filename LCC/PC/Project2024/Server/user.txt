@@ -1,0 +1,12 @@
+David|123|1|0|0|OFF
+Rui|123|1|0|0|OFF
+Mac|123|1|0|0|OFF
+Henrique|123|1|0|0|OFF
+Cary|123|1|0|0|OFF
+Black|123|1|0|0|OFF
+Tony|123|1|0|0|OFF
+Maria|123|3|1|0|OFF
+Peter|123|3|0|1|OFF
+Stick|123|1|0|0|OFF
+Jordan|123|3|0|0|OFF
+H|123|2|0|0|OFF

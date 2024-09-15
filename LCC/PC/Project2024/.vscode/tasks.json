@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "javac -cp \"lib/core/library/core.jar\" Client/Client.java Client/Screen.java Client/Connection.java Client/Exceptions/InvalidAccount.java Client/Exceptions/InvalidPassword.java Client/Exceptions/UserAlreadyExists.java",
+        "group": "build",
+        "problemMatcher": ["$javac"]
+      },
+      {
+        "label": "run",
+        "type": "shell",
+        "command": "java -cp \".:lib/core/library/core.jar\" Client/Client localhost 1234",
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  
+  
