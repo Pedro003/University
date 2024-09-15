@@ -1,0 +1,5 @@
+./client execute 100 -u "ls -l"
+./client execute 100 -p "cat lusiadas.txt | grep palavra | wc -l"
+./client execute 100 -p "ls -l | grep pedro | wc -l"
+./client execute 100 -u "../Testes/void 10"
+./client execute 100 -u "../Testes/hello 30"
